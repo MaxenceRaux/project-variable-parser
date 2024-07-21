@@ -1,4 +1,5 @@
-package com.maxenceraux;
+package com.maxenceraux.model;
+
 /*
  * This file is part of the project project-variable-parser.
  *
@@ -13,8 +14,13 @@ package com.maxenceraux;
  * GNU Affero General Public License for more details.
  *
  * You should have received a copy of the GNU Affero General Public License
- * along with My Maven Plugin Project. If not, see <https://www.gnu.org/licenses/>.
+ * along with project-variable-parser. If not, see <https://www.gnu.org/licenses/>.
  */
 
-public class AnnotationProcessor {
+import lombok.Value;
+
+@Value
+public class Variable {
+     String name;
+     String defaultValue;
 }

@@ -33,7 +33,7 @@ jobs:
       - name: Run tests
         run: mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent install -Dmaven.test.failure.ignore=true
       - name: TOTO
-        run: ls -all src/main/java/com.maxenceraux
+        run: ls -all src/main/java/com/maxenceraux
       - name: Build and analyze
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Needed to get PR information, if any

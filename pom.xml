@@ -10,6 +10,9 @@
   <properties>
     <sonar.organization>maxenceraux</sonar.organization>
     <sonar.host.url>https://sonarcloud.io</sonar.host.url>
+    <sonar.coverage.jacoco.xmlReportPaths>
+      ../project-variable-parser/target/surefire-reports/
+    </sonar.coverage.jacoco.xmlReportPaths>
   </properties>
   <dependencies>
     <dependency>

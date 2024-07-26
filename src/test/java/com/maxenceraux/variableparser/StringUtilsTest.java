@@ -1,13 +1,14 @@
-package com.maxenceraux;
+package com.maxenceraux.variableparser;
 
-import com.maxenceraux.model.Variable;
+import com.maxenceraux.variableparser.model.Variable;
+import com.maxenceraux.variableparser.utils.StringUtils;
+import org.assertj.core.api.AssertionsForClassTypes;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
 import org.junit.jupiter.params.provider.ValueSource;
 
-import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
@@ -55,14 +56,14 @@ class StringUtilsTest {
 
     })
     void shouldExtractVariableFromExpression(String expression, String expectedName, String expectedValue) {
-        assertThat(StringUtils.extractVariableName(expression))
+        AssertionsForClassTypes.assertThat(StringUtils.extractVariableName(expression))
                 .contains(new Variable(expectedName, expectedValue));
     }
 
     @Test
     @DisplayName("Should return empty if no match.")
     void shouldReturnEmptyIfNoMatch() {
-        assertThat(StringUtils.extractVariableName("expression")).isEmpty();
+        AssertionsForClassTypes.assertThat(StringUtils.extractVariableName("expression")).isEmpty();
     }
 
 

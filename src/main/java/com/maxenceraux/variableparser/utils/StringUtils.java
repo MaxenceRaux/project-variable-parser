@@ -1,4 +1,4 @@
-package com.maxenceraux;
+package com.maxenceraux.variableparser.utils;
 
 /*
  * This file is part of the project project-variable-parser.
@@ -17,7 +17,7 @@ package com.maxenceraux;
  * along with project-variable-parser. If not, see <https://www.gnu.org/licenses/>.
  */
 
-import com.maxenceraux.model.Variable;
+import com.maxenceraux.variableparser.model.Variable;
 import lombok.experimental.UtilityClass;
 
 import java.util.Optional;

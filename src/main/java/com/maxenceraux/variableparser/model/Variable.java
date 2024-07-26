@@ -1,4 +1,4 @@
-package com.maxenceraux.model;
+package com.maxenceraux.variableparser.model;
 
 /*
  * This file is part of the project project-variable-parser.
@@ -23,4 +23,8 @@ import lombok.Value;
 public class Variable {
      String name;
      String defaultValue;
+
+     public boolean hasDefaultValue() {
+          return defaultValue != null;
+     }
 }

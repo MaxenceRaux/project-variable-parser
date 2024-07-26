@@ -1,5 +1,4 @@
-package com.maxenceraux;
-
+package com.maxenceraux.variableparser.model;
 /*
  * This file is part of the project project-variable-parser.
  *
@@ -17,21 +16,15 @@ package com.maxenceraux;
  * along with project-variable-parser. If not, see <https://www.gnu.org/licenses/>.
  */
 
-import org.apache.maven.plugin.AbstractMojo;
-import org.apache.maven.plugin.MojoExecutionException;
-import org.apache.maven.plugins.annotations.LifecyclePhase;
-import org.apache.maven.plugins.annotations.Mojo;
-import org.apache.maven.plugins.annotations.Parameter;
+import lombok.AllArgsConstructor;
+import lombok.Data;
 
-@Mojo(name = "parse", defaultPhase = LifecyclePhase.PROCESS_CLASSES)
-public class AnnotationProcessorMojo extends AbstractMojo {
+import java.util.List;
 
-    private final ClassesProcessor classesProcessor = new ClassesProcessor(this.getLog());
-
-    @Parameter(property = "project.build.outputDirectory", required = true)
-    private String outputDirectory;
-
-    public void execute() throws MojoExecutionException {
-        classesProcessor.processClasses(outputDirectory);
-    }
+@Data
+@AllArgsConstructor
+public class ClassVariable {
+    private String className;
+    private String packageName;
+    private List<Variable> variables;
 }

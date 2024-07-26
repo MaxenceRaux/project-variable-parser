@@ -24,3 +24,5 @@ hs_err_pid*
 replay_pid*
 /.idea/project-variable-parser.iml
 /.idea/
+/project-variable-parser/target/
+/target/

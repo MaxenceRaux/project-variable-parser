@@ -1,0 +1,5 @@
+<plugin>
+    <name>Annotation Processor Plugin</name>
+    <description>A plugin to run the annotation processor with default configuration.</description>
+    <goalPrefix>annotations</goalPrefix>
+</plugin>
